@@ -1,1 +1,0 @@
-Mover el archivo flatlaf a libraries de la carpeta de  netbeans
