@@ -92,7 +92,7 @@ public class PantallaR extends javax.swing.JFrame {
                 return text.matches("\\d*"); // Permite solo dígitos
             }
         });
-        ((AbstractDocument) textT.getDocument()).setDocumentFilter(new DocumentFilter() {
+        ((AbstractDocument) text.getDocument()).setDocumentFilter(new DocumentFilter() {
             @Override
             public void insertString(DocumentFilter.FilterBypass fb, int offset, String string, AttributeSet attr) throws BadLocationException {
                 if (esNumero(string)) {
@@ -160,7 +160,7 @@ public class PantallaR extends javax.swing.JFrame {
 
     public Persona CreacionOyente() {
         String seleccion = (String) Gener.getSelectedItem();
-        Persona persona = new Persona(textD.getText(), textNombre.getText(), seleccion, Integer.valueOf(textE.getText()), textT.getText());
+        Persona persona = new Persona(textD.getText(), textNombre.getText(), seleccion, Integer.valueOf(textE.getText()), text.getText());
         persona.setCanciones(SeleccionCancion());
         return persona;
     }
@@ -208,7 +208,7 @@ public class PantallaR extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         textE = new javax.swing.JTextField();
-        textT = new javax.swing.JTextField();
+        text = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
@@ -272,18 +272,18 @@ public class PantallaR extends javax.swing.JFrame {
         });
         jPanel1.add(textE, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 226, -1));
 
-        textT.setForeground(new java.awt.Color(255, 255, 255));
-        textT.addActionListener(new java.awt.event.ActionListener() {
+        text.setForeground(new java.awt.Color(255, 255, 255));
+        text.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textTActionPerformed(evt);
+                textActionPerformed(evt);
             }
         });
-        textT.addKeyListener(new java.awt.event.KeyAdapter() {
+        text.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                textTKeyReleased(evt);
+                textKeyReleased(evt);
             }
         });
-        jPanel1.add(textT, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, 226, -1));
+        jPanel1.add(text, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, 226, -1));
 
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Artista:");
@@ -489,9 +489,9 @@ public class PantallaR extends javax.swing.JFrame {
 
     }//GEN-LAST:event_ConfirmarActionPerformed
 
-    private void textTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textTActionPerformed
+    private void textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textActionPerformed
 
-    }//GEN-LAST:event_textTActionPerformed
+    }//GEN-LAST:event_textActionPerformed
 
     private void ConfirmarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConfirmarMousePressed
         // TODO add your handling code here:
@@ -521,13 +521,13 @@ public class PantallaR extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_textEKeyReleased
 
-    private void textTKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textTKeyReleased
-        if (!textT.getText().isEmpty()) {
+    private void textKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textKeyReleased
+        if (!text.getText().isEmpty()) {
             valido = true;
         } else {
             valido = false;
         }
-    }//GEN-LAST:event_textTKeyReleased
+    }//GEN-LAST:event_textKeyReleased
 
     private void VerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerificarActionPerformed
         if (valido == true && a==3) {
@@ -598,9 +598,9 @@ public class PantallaR extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField text;
     private javax.swing.JTextField textD;
     private javax.swing.JTextField textE;
     private javax.swing.JTextField textNombre;
-    private javax.swing.JTextField textT;
     // End of variables declaration//GEN-END:variables
 }

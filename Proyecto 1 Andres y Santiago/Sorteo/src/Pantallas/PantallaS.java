@@ -163,7 +163,7 @@ public class PantallaS extends javax.swing.JFrame {
         tabal.setSelectionForeground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(tabal);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 1170, 330));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 1170, 240));
 
         bttGanador.setForeground(new java.awt.Color(255, 255, 255));
         bttGanador.setText("Realizar Sorteo");
@@ -299,19 +299,21 @@ public class PantallaS extends javax.swing.JFrame {
         calaca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/vecteezy_black-luxury-abstract-background-with-line-and-golden_28201509.jpg"))); // NOI18N
         calaca.setFocusCycleRoot(true);
         calaca.setName(""); // NOI18N
-        jPanel1.add(calaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 840));
+        jPanel1.add(calaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 790));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1239, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 756, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 64, Short.MAX_VALUE))
         );
 
         pack();
